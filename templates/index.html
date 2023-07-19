@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font.css' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>دانشکده فنی و حرفه ای دختران قم</title>
+    <script src="{% static 'js/js.js/bootstrap.bundle.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+</head>
+
+
+<body style="direction: rtl">
+
+<header class="shadow">
+
+    <div class="img-header">
+        <img src="{%static 'img/header.png' %}">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <div class="container">
+            <a style="color: white" class="navbar-brand nav_active " href="index.html">صفحه اصلی</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="degrees.html">مقاطع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="gallery.html">گالری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="files.html">فایل ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about_us.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="question.html">سوالات متداول</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="جستجو" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">جستجو</button>
+                    <button class="btn btn-outline-primary btn_login" type="button"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">ورود
+                    </button>
+                </form>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true" style="border-radius: 15px">
+                    <div class="modal-dialog" style="border-radius: 15px">
+                        <div class="modal-content" style="border-radius: 15px">
+                            <h1 class="modal-title fs-5 title_login" id="exampleModalLabel"> ورود کاربران</h1>
+                            <div class="modal-body">
+                                <form method="post" action="{% url "accounts:login" %}">
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label lable_name">شماره موبایل یا
+                                            نام کاربری خود را وارد کنید</label>
+                                        <input type="text" class="form-control text_name" id="recipient-name">
+                                    </div>
+                                    <div class="mb-3 justify-content-center align-items-center">
+                                        <label for="message-text" class="col-form-label lable_pass">رمز عبور خود را وارد
+                                            کنید</label>
+                                        <input type="text" class="form-control text_pass" id="message-text">
+                                        <button type="button" class="btn btn-secondary btn_login1"
+                                                data-bs-dismiss="modal">ورود کاربر
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn_sign">ثبت نام</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<section>
+    <div style="align-items: center;text-align: center;" class="container mt-4">
+        <div class="row">
+            <div style="align-items: center;text-align: center;" class="col-lg-4 col-sm-12 mt-4 carosel">
+                <div id="carouselExampleAutoplaying" class="carousel slide mt-5 p-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../static/img/1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/img/2.jpg" class="d-block w-100" alt="...">
+                            <p style="color: black;font-size: large;background-color:#e7e7e7 ;font-family: irs;padding: 5px;font-weight: bold">
+                                ژوژمان گرافیک</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../static/img/5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div style="align-items: center;text-align: center;" class="col-lg-4 col-sm-12 mt-4">
+                <div id="d-left1">
+                    <div class="sab-div1"><a href="https://samyad.tvu.ac.ir/">سامانه مدیریت و یادگیری الکترونیکی
+                        سمیاد</a></div>
+                    <div class="sab-div1"><a href="https://bustan.tvu.ac.ir/">سامانه بوستان فنی و حرفه ای</a></div>
+                    <div class="sab-div1"><a href="https://khedmat.tvu.ac.ir/Home">سامانه میز خدمت</a></div>
+                    <div class="sab-div1"><a href="https://isti.ir/">معاونت علمی فناوری ریاست جمهوری</a></div>
+                    <div class="sab-div1"><a href="https://www.mimt.gov.ir/">وزارت صنعت،معدن و تجارت</a></div>
+                    <div class="sab-div1"><a href="https://ghom.ir/">استانداری قم</a></div>
+
+                </div>
+            </div>
+            <div style="align-items: center;text-align: center;" class="col-lg-4 col-sm-12 mt-4">
+                <div id="d-left2">
+                    <div class="sab-div2"><a href="emerjencyloan.html">اطلاعیه وام اضطراری</a></div>
+                    <div class="sab-div2"><a href="#">راهنمای دریافت گواهی اشتغال به تحصیل</a></div>
+                    <div class="sab-div2"><a href="#">کسب رتبه سوم مسابقات ملی مهارت</a></div>
+                    <div class="sab-div2"><a href="credit%20card%20buy%20books.html">دریافت بن اعتباری خرید کتاب</a>
+                    </div>
+                    <div class="sab-div2"><a href="esfahan%20camp.html">اردوی تفریحی یک روزه اصفهان</a></div>
+                    <div class="sab-div3"><a href="mashhad%20camp.html">اردوی زیارتی مشهد مقدس</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <p class="p1">خدمات پرکاربرد</p>
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-strike-100.png">
+                <span class="p2">جدول زمانبندی انتخاب واحد1402</span>
+                <button class="btn1"><a href="Unit%20selection%20time%20table.html">اطلاعات بیشتر</a></button>
+            </div>
+        </div>
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-leave-100.png">
+                <span class="p2">اطلاعیه دریافت دانشجویان جدیدالورود</span>
+                <button class="btn1"><a href="Notice%20of%20incoming%20new%20student.html">اطلاعات بیشتر</a></button>
+
+            </div>
+        </div>
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-test-cheating-100.png">
+                <span class="p2">نکات مربوط به امتحانات</span>
+                <button class="btn1"><a href="Tips%20for%20exams.html">اطلاعات بیشتر</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-demand-100.png">
+                <span class="p2">دوره های آموزش مجازی</span>
+                <button class="btn1"><a href="onlinetraining.html">اطلاعات بیشتر</a></button>
+            </div>
+        </div>
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-bunk-bed-100.png">
+                <span class="p2">امور خوابگاه</span>
+                <button class="btn1"><a href="#">اطلاعات بیشتر</a></button>
+            </div>
+        </div>
+        <div style="align-items: center" class="col-lg-4 col-md-6">
+            <div class="d-cart">
+                <img src="../static/img/icons8-add-list-100.png">
+                <span class="p2">جدول زمانبندی حذف و اضافه1402</span>
+                <button class="btn1"><a href="#">اطلاعات بیشتر</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container contain_m">
+        <form class="form_nazar row col-lg-11" action="{% url 'home:submit_comment' %}">
+            {% csrf_token %}
+            <div class="col-md-2 p-0">
+                <div class="rec">
+                    <h1 class="h1_nazar">نظرات کاربران</h1>
+                </div>
+            </div>
+            <div class="col-md-9 p-5">
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label">نام و نام خانوادگی</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label">موضوع</label>
+                    <input type="tez" class="form-control" id="exampleFormControlInput2">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label">مخاطب</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput3">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlTextarea1" class="form-label">متن پیام</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div style="text-align: center" class="col-lg-12">
+                    <button class="btn_send">ارسال پیام</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 line">
+                <a href="" class="font_foter">خدمات الکترونیکی</a>
+                <hr>
+                <a class="link_footer" href="">سیستم اتوماسیون اداری</a>
+                <br>
+                <a class="link_footer" href="">سامانه نهاد رهبری</a>
+                <br>
+                <a class="link_footer" href="https://bustan.tvu.ac.ir/">سامانه بوستان</a>
+                <br>
+                <a class="link_footer" href="">سامانه رفاه</a>
+                <br>
+                <a class="link_footer" href="">سامانه تغذیه</a>
+                <br>
+                <a class="link_footer" href="">سامانه ملی کارآموزی</a>
+                <br>
+                <a class="link_footer" href="">سامانه آموزش مجازی</a>
+            </div>
+            <div class="col-lg-3 col-sm-12 line">
+                <a href="" class="font_foter">دسترسی سریع</a>
+                <hr>
+                <a class="link_footer" href="">استعلام سوابق بیمه</a>
+                <br>
+                <a class="link_footer" href="">اطلاعیه وام دانشجویی</a>
+                <br>
+                <a class="link_footer" href="">برگزاری دوره آموزشی</a>
+                <br>
+                <a class="link_footer" href="">تقاضای معرفی به استاد</a>
+                <br>
+                <a class="link_footer" href="">برنامه امتحانات</a>
+            </div>
+            <div class="col-lg-3 col-sm-12 line">
+                <a href="" class="font_foter">سایت های مرتبط</a>
+                <hr>
+                <a class="link_footer" href="">دانشگاه فنی و حرفه ای</a>
+                <br>
+                <a class="link_footer" href="">پایگاه اطلاع رسانی دولت</a>
+                <br>
+                <a class="link_footer" href="">وزارت صنعت،معدن،تجارت</a>
+                <br>
+                <a class="link_footer" href="">وزارت علوم،تحقیقات،فناوری</a>
+                <br>
+                <a class="link_footer" href="">میز خدمت</a>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+                <p class="font_foter">اطلاعات تماس</p>
+                <hr>
+                <p class="p_footer">نشانی:قم-شهرک قدس<br> ولیعصر13-کوچه هدایت 13</p>
+                <p class="p_footer">کد پستی:1891862827</p>
+                <p class="p_footer">تلفن:02532855375</p>
+                <p class="p_footer">نمابر:02532855244</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

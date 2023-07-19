@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ثبت نام</title>
+
+    <!-- لینک به فایل‌های استایل Bootstrap و فونت‌های مورد نیاز -->
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.6.0/css/bootstrap.min.css"
+          integrity="sha384-5YQwQ7ivg7JzDbxQ9VrOg5t7JtJZQ2E0EwD/9s6C5QQW6ilSkD+YvH3j2P1QlMcA"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha384-NJLrD1QGx5K6C2rJy4XtJ68C0YbdL5Xr5f2Qq6d1kxMg0gZ0vtcY+HUJj4oVZw6Q"
+          crossorigin="anonymous">
+
+    <!-- استایل CSS سفارشی -->
+    <style>
+        body {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .form-signin {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+        }
+
+        .form-signin h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            font-size: 1.1rem;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .btn-signin {
+            font-size: 1.1rem;
+            height: 3.5rem;
+            border-radius: 0.5rem;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-signin:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+
+<form class="form-signin" action="{% url 'accounts:register' %}" method="post">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal">ثبت نام</h1>
+
+    <div class="form-group">
+        <label for="username" class="form-label">شماره موبایل یا نام کاربری</label>
+        <input type="text" class="form-control" id="username" name="username" required autofocus>
+    </div>
+
+    <div class="form-group">
+        <label for="password1" class="form-label">رمز عبور</label>
+        <input type="password" class="form-control" id="password1" name="password1" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password2" class="form-label">تکرار رمز عبور</label>
+        <input type="password" class="form-control" id="password2" name="password2" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label">ایمیل</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">ثبت نام</button>
+</form>
+
+<!-- لینک به فایل‌های جاوااسکریپت Bootstrap -->
+<script src="https://cdn.rtlcss.com/bootstrap/v4.6.0/js/bootstrap.min.js"
+        integrity="sha384-7LqUd2iVZsaw6Zy4uWuLp1b3XtMmdzOJ0R0IaZgjZjC7mP7OJLQJCrBMYTWfz4Jj"
+        crossoriginای="anonymous"></script>
+
+</body>
+</html>
